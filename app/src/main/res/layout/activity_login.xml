@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:fillViewport="true">
+	
+	<android.support.constraint.ConstraintLayout
+			android:id="@+id/container"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:focusableInTouchMode="true"
+			android:fitsSystemWindows="true"
+			android:animateLayoutChanges="true"
+			android:fillViewport="true" >
+		
+		<android.support.design.widget.CoordinatorLayout
+				android:id="@+id/coordinatorLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentEnd="true"
+				app:layout_constraintBottom_toBottomOf="parent" />
+		
+		<ImageView
+				android:id="@+id/login_logo"
+				android:layout_width="200dp"
+				android:layout_height="200dp"
+				android:layout_marginTop="80dp"
+				android:contentDescription="@string/main_logo"
+				app:srcCompat="@drawable/logo"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+		
+		<TextView
+				android:id="@+id/login_slogan_main"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="32dp"
+				android:textSize="20sp"
+				android:textColor="@color/colorPrimary"
+				android:text="@string/find_out"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/login_favorite_icon" />
+		
+		<TextView
+				android:id="@+id/login_slogan_sub"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="28sp"
+				android:layout_marginTop="4dp"
+				android:textStyle="bold"
+				android:textColor="@color/colorLight"
+				android:text="@string/best_qualities"
+				app:layout_constraintEnd_toEndOf="@+id/login_slogan_main"
+				app:layout_constraintStart_toStartOf="@+id/login_slogan_main"
+				app:layout_constraintTop_toBottomOf="@+id/login_slogan_main" />
+		
+		<ImageView
+				android:id="@+id/login_record_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="32dp"
+				android:contentDescription="@string/small_icon_of_quality"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintBottom_toTopOf="@+id/login_logo"
+				app:srcCompat="@drawable/ic_record_voice_over_primary_32dp" />
+		
+		<ImageView
+				android:id="@+id/login_work_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="4dp"
+				android:layout_marginTop="8dp"
+				android:contentDescription="@string/small_icon_of_quality"
+				app:layout_constraintEnd_toStartOf="@+id/login_logo"
+				app:layout_constraintTop_toBottomOf="@+id/login_record_icon"
+				app:srcCompat="@drawable/ic_work_primary_32dp" />
+		
+		<ImageView
+				android:id="@+id/login_palette_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="4dp"
+				android:layout_marginTop="8dp"
+				android:contentDescription="@string/small_icon_of_quality"
+				app:layout_constraintStart_toEndOf="@+id/login_logo"
+				app:layout_constraintTop_toTopOf="@+id/login_work_icon"
+				app:layout_constraintBottom_toBottomOf="@+id/login_work_icon"
+				app:srcCompat="@drawable/ic_palette_primary_32dp" />
+		
+		<ImageView
+				android:id="@+id/login_incandescent_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="32dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp"
+				android:contentDescription="@string/small_icon_of_quality"
+				app:layout_constraintEnd_toStartOf="@+id/login_logo"
+				app:layout_constraintTop_toBottomOf="@+id/login_work_icon"
+				app:layout_constraintBottom_toTopOf="@+id/login_face_icon"
+				app:srcCompat="@drawable/ic_wb_incandescent_primary_32dp" />
+		
+		<ImageView
+				android:id="@+id/login_fitness_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:layout_marginStart="32dp"
+				android:contentDescription="@string/small_icon_of_quality"
+				app:layout_constraintVertical_bias="1.0"
+				app:layout_constraintStart_toEndOf="@+id/login_logo"
+				app:layout_constraintTop_toTopOf="@+id/login_incandescent_icon"
+				app:layout_constraintBottom_toBottomOf="@+id/login_incandescent_icon"
+				app:srcCompat="@drawable/ic_fitness_center_primary_32dp" />
+		
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:srcCompat="@drawable/ic_favorite_primary_32dp"
+				android:id="@+id/login_favorite_icon"
+				android:layout_marginTop="24dp"
+				app:layout_constraintTop_toBottomOf="@+id/login_logo"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				android:contentDescription="@string/small_icon_of_quality" />
+		
+		<ImageView
+				android:id="@+id/login_face_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:contentDescription="@string/small_icon_of_quality"
+				app:layout_constraintBottom_toTopOf="@+id/login_favorite_icon"
+				app:layout_constraintEnd_toStartOf="@+id/login_logo"
+				app:layout_constraintStart_toStartOf="@+id/login_work_icon"
+				app:srcCompat="@drawable/ic_tag_faces_primary_32dp" />
+		
+		<ImageView
+				android:id="@+id/login_point_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:contentDescription="@string/small_icon_of_quality"
+				app:layout_constraintBottom_toBottomOf="@+id/login_face_icon"
+				app:layout_constraintTop_toTopOf="@+id/login_face_icon"
+				app:layout_constraintStart_toStartOf="@+id/login_palette_icon"
+				app:layout_constraintVertical_bias="1.0"
+				app:layout_constraintEnd_toEndOf="@+id/login_palette_icon"
+				app:srcCompat="@drawable/ic_control_point_primary_32dp" />
+		
+		<Button
+				android:id="@+id/vk_si"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxWidth="240dp"
+				android:layout_marginStart="28dp"
+				android:layout_marginBottom="16dp"
+				android:paddingTop="16dp"
+				android:paddingBottom="16dp"
+				android:paddingEnd="24dp"
+				android:paddingStart="16dp"
+				android:text="@string/title_activity_enter"
+				android:textSize="16sp"
+				android:textColor="@color/colorLight"
+				android:drawableStart="@drawable/vk_logo_white"
+				android:drawablePadding="12dp"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:maxLines="1"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+				style="@style/Base.Widget.AppCompat.Button.Colored" />
+	</android.support.constraint.ConstraintLayout>
+</ScrollView>

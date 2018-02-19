@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "net.webdefine.yq"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("D:\\Programming\\Define\\YQ\\release.jks")
+            storePassword "SZ3VFMrhgh"
+            keyAlias "Key0"
+            keyPassword "SZ3VFMrhgh"
+        }
+
+        buildTypes {
+            debug {
+                minifyEnabled false
+                useProguard false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+
+            release {
+                minifyEnabled true
+                signingConfig signingConfigs.release
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Default Android and Material libraries
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:recyclerview-v7:$support_version"
+    implementation "com.android.support:design:$support_version"
+    implementation "com.android.support:cardview-v7:$support_version"
+    implementation "com.android.support:palette-v7:$support_version"
+    implementation "com.android.support:preference-v7:$support_version"
+    implementation "com.android.support:preference-v14:$support_version"
+    implementation "com.android.support:support-annotations:${support_version}"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // Kotlin standard library
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    // vk sdk
+    implementation 'com.vk:androidsdk:1.6.9'
+
+    // kotlin anko library
+    implementation "org.jetbrains.anko:anko:$anko_version"
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+
+    // library for http queries
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+
+    // library for parsing JSON
+    implementation 'com.beust:klaxon:0.30'
+
+    // enabling multidex
+    implementation 'com.android.support:multidex:1.0.2'
+
+    // joda time library for pretty date-time formatting
+    implementation 'joda-time:joda-time:2.9.9'
+
+    // Picasso library for loading images from url
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // library for blurring images
+    implementation 'jp.wasabeef:blurry:2.1.1'
+
+    // Google Gson library for Java-to-Json
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    // library for material dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+
+    // library for enhanced Navigation Drawer
+    //implementation("com.mikepenz:materialdrawer:6.0.6@aar") {
+    //    transitive = true
+    //}
+
+    // library for enhanced Navigation Drawer for Kotlin
+    implementation 'co.zsmb:materialdrawer-kt:1.3.3'
+
+    // iconic fonts
+    implementation "com.mikepenz:iconics-core:3.0.3@aar"
+    implementation "com.mikepenz:iconics-views:3.0.3@aar"  // this adds all ui view widgets
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.2.original@aar'
+    implementation 'com.mikepenz:fontawesome-typeface:5.0.6.0@aar'
+
+    // JUnit library
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+repositories {
+    mavenCentral()
+}

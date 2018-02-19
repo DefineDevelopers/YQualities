@@ -1,0 +1,49 @@
+<manifest
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		package="net.webdefine.yq">
+	
+	<uses-permission android:name="android.permission.INTERNET" />
+	
+	<application
+			android:name=".tools.App"
+			android:allowBackup="true"
+			android:label="@string/app_name"
+			android:icon="@mipmap/app_logo"
+			android:roundIcon="@mipmap/app_logo_round"
+			android:supportsRtl="true"
+			android:fullBackupContent="true"
+			android:theme="@style/AppTheme.NoActionBarWithStatusBar" >
+		
+		<activity android:name=".activities.SplashScreenActivity"
+		          android:label="@string/app_name"
+		          android:theme="@style/AppTheme.NoActionBarWithStatusBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<activity
+				android:name=".activities.LoginActivity"
+				android:label="@string/title_activity_enter"
+				android:theme="@style/AppTheme.NoActionBarWithStatusBar">
+		</activity>
+		
+		<activity
+				android:name=".activities.ProfileActivity"
+		        android:label="Profile"
+				android:theme="@style/AppTheme.NoActionBarWithStatusBar">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+			</intent-filter>
+		</activity>
+		
+		<activity
+				android:name="com.vk.sdk.VKServiceActivity"
+				android:label="ServiceActivity"
+				android:theme="@style/VK.Transparent" >
+		</activity>
+		
+	</application>
+</manifest>

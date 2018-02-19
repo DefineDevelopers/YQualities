@@ -1,0 +1,51 @@
+<resources>
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+	
+	<style name="AppTheme.NoActionBarWithStatusBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowNoTitle">true</item>
+		
+		<item name="android:windowDrawsSystemBarBackgrounds">true</item>
+		<item name="android:windowBackground">@color/colorPrimaryDark</item>
+		<item name="android:textColor">@color/colorTextPrimary</item>
+		<item name="android:textColorHint">@color/colorText</item>
+		
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorDivider</item>
+		
+		<item name="colorControlNormal">@color/colorLight</item>
+		<item name="colorControlActivated">@color/colorPrimaryDark</item>
+		<item name="alertDialogTheme">@style/Theme.AppCompat.DayNight.Dialog.Alert</item>
+	</style>
+	
+	<!--Error label text style-->
+	<style name="errorLayoutInputText" parent="TextAppearance.AppCompat.Small">
+		<item name="android:textColor">@color/colorPrimaryDark</item>
+	</style>
+	
+	<!--Input field style-->
+	<style name="errorLayoutInputField" parent="Theme.AppCompat.Light">
+		<item name="colorControlNormal">@color/colorPrimaryDark</item>
+		<item name="colorControlActivated">@color/colorPrimaryDark</item>
+	</style>
+	
+	<style name="TextAppearence.TextInputLayout" parent="@android:style/TextAppearance">
+		<item name="android:textColor">@color/colorText</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	
+	<style name="CustomButtonColor" parent="ThemeOverlay.AppCompat">
+		<item name="colorButtonNormal">@color/colorPrimaryDark</item>
+	</style>
+	
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+	
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
